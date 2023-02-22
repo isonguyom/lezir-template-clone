@@ -12,7 +12,7 @@
         <div class="d-lg-flex justify-content-between align-items-center flex-wrap feature mb-5"
           v-for="feature, key in features" :key="key" :class="feature.mainClass" :style="{ backgroundImage: feature.bg }">
           <div class="feature-img col-lg-6">
-            <img :src="feature.image" class="img-fluid rounded-start" alt="...">
+            <img :src="`/src/assets/images/${feature.image}`" class="img-fluid rounded-start" alt="...">
           </div>
           <div class="col-lg-5 py-5">
             <p class="card-title mb-4">
@@ -50,7 +50,7 @@ export default {
             { text: "Cras ultricies mi eu turpis hendrerit fringilla.", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-life-preserver" viewBox="0 0 16 16"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm6.43-5.228a7.025 7.025 0 0 1-3.658 3.658l-1.115-2.788a4.015 4.015 0 0 0 1.985-1.985l2.788 1.115zM5.228 14.43a7.025 7.025 0 0 1-3.658-3.658l2.788-1.115a4.015 4.015 0 0 0 1.985 1.985L5.228 14.43zm9.202-9.202-2.788 1.115a4.015 4.015 0 0 0-1.985-1.985l1.115-2.788a7.025 7.025 0 0 1 3.658 3.658zm-8.087-.87a4.015 4.015 0 0 0-1.985 1.985L1.57 5.228A7.025 7.025 0 0 1 5.228 1.57l1.115 2.788zM8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/> </svg>' }
           ],
           bg: "url('/src/assets/images/features-bg-img.png')",
-          image: "/src/assets/images/features-img.png",
+          image: "features-img.png",
           readMoreLink: "#",
           buyMoreLink: "#"
         },
@@ -62,11 +62,18 @@ export default {
             { text: "Cras ultricies mi eu turpis hendrerit fringilla.", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rss" viewBox="0 0 16 16"> <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/> <path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z"/> </svg>' }
           ],
           bg: "url('/src/assets/images/features-bg-img-1.png')",
-          image: "/src/assets/images/features-img-1.png",
+          image: "features-img-1.png",
           readMoreLink: "#",
           buyMoreLink: "#"
         }
       ]
+    }
+  },
+
+  computed: {
+    getImageUrl(name) {
+      const image = `/src/assets/images/${name}`
+      console.log(typeof(image))
     }
   }
 }
@@ -91,4 +98,5 @@ export default {
 .buy-btn:hover {
   color: #5A4FDC !important;
   background-color: #5b4fdc31 !important;
-}</style>
+}
+</style>
