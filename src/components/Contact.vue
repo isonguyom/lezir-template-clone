@@ -1,46 +1,48 @@
 <template>
-  <section class="Contact container">
-    <div class="card text-center col-lg-6 mb-5 border-0 mx-auto">
-      <div class="card-body">
-        <h3 class="card-title">Contact Us</h3>
-        <p class="card-text opacity-75">Et harum quidem rerum facilis est et expedita distinctio nam libero
-          tempore cum soluta nobis eligendi cumque.</p>
-      </div>
-    </div>
-    <div class="card mb-3 border-0">
-      <div class="d-lg-flex justify-content-between">
-        <div class="col-lg-6">
-          <form class="row g-3">
-            <div class="col-md-6">
-              <label for="name" class="form-label mb-2">Name*</label>
-              <input type="text" class="form-control border border-secondary-subtle py-2" id="name"
-                placeholder="Your name...">
-            </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label mb-2">Email Address*</label>
-              <input type="email" class="form-control border border-secondary-subtle py-2" id="inputEmail4"
-                placeholder="Your email...">
-            </div>
-            <div class="col-12">
-              <label for="textarea" class="mb-2">Message*</label>
-              <textarea class="form-control border border-secondary-subtle" placeholder="Your message..."
-                id="textarea"></textarea>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn px-4 rounded-1 text-white shadow-sm fw-bold mt-2 custom-btn">Send Message
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send ms-2"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
-                </svg></button>
-            </div>
-          </form>
+  <section class="Contact container-fluid">
+    <div class="container">
+      <div class="card text-center col-lg-6 mb-5 border-0 mx-auto">
+        <div class="card-body">
+          <h3 class="card-title">Contact Us</h3>
+          <p class="card-text opacity-75">Et harum quidem rerum facilis est et expedita distinctio nam libero
+            tempore cum soluta nobis eligendi cumque.</p>
         </div>
-        <div class="col-lg-5">
-          <div class="card-body">
-            <p class="card-text opacity-75" v-for="detail, key in contactDetails" :key="key">
-              <span class="opacity-75 me-1" v-html="detail.icon"></span> : {{ detail.text }}
-            </p>
+      </div>
+      <div class="card mb-3 border-0">
+        <div class="d-lg-flex justify-content-between">
+          <div class="col-lg-6">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label mb-2">Name*</label>
+                <input type="text" class="form-control border border-secondary-subtle py-2" id="name"
+                  placeholder="Your name...">
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label mb-2">Email Address*</label>
+                <input type="email" class="form-control border border-secondary-subtle py-2" id="inputEmail4"
+                  placeholder="Your email...">
+              </div>
+              <div class="col-12">
+                <label for="textarea" class="mb-2">Message*</label>
+                <textarea class="form-control border border-secondary-subtle" placeholder="Your message..."
+                  id="textarea"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn px-4 rounded-1 text-white shadow-sm fw-bold mt-2 custom-btn">Send Message
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-send ms-2" viewBox="0 0 16 16">
+                    <path
+                      d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+                  </svg></button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-5">
+            <div class="card-body">
+              <p class="card-text opacity-75" v-for="detail, key in contactDetails" :key="key">
+                <span class="opacity-75 me-1" v-html="detail.icon"></span> : {{ detail.text }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
