@@ -1,4 +1,5 @@
 <script setup>
+import { reactive } from 'vue'
 import Hero from "../components/Hero.vue";
 import WhyChoose from "../components/WhyChoose.vue";
 import Features from "../components/Features.vue";
@@ -10,22 +11,33 @@ import Login from "../components/Login.vue";
 import Register from "../components/Register.vue";
 
 
-defineProps(['loginIsActive', 'registerIsActive'])
+
+const props = defineProps(['loginIsActive', 'registerIsActive'])
+const state = reactive({ loginIsActive: props.loginIsActive, registerIsActive: props.registerIsActive })
+function toggleLoginModal() {
+    state.loginIsActive = !state.loginIsActive
+}
+function toggleRegisterModal() {
+    state.registerIsActive = !state.registerIsActive
+}
 </script>
 
 <template>
     <section class="w-100">
         <Hero id="hero"></Hero>
+        <div>{{ props.newsletterPopup }}</div>
         <WhyChoose></WhyChoose>
         <Features id="features"></Features>
         <Plan id="pricing"></Plan>
         <News id="blog"></News>
         <Contact id="contact"></Contact>
         <Footer></Footer>
-        <section class="custom-modal w-100 vh-100 position-fixed top-0 py-4" :class="{ modal_active: loginIsActive }">
+        <section class="custom-modal w-100 vh-100 position-fixed top-0 py-4" :class="{ modal_active: state.loginIsActive }"
+            @click.self.prevent="toggleLoginModal">
             <Login></Login>
         </section>
-        <section class="custom-modal w-100 vh-100 position-fixed top-0 py-4" :class="{ modal_active: registerIsActive }">
+        <section class="custom-modal w-100 vh-100 position-fixed top-0 py-4"
+            :class="{ modal_active: props.registerIsActive }" @click="toggleRegisterModal">
             <Register></Register>
         </section>
     </section>

@@ -31,10 +31,10 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item px-4 px-lg-3">
-            <a class="nav-link" href="#" @click="toggleModal(showLogin)">Login</a>
+            <button class="nav-link bg-transparent border-0" @click="$emit('toggle-login')">Login</button>
           </li>
           <li class="nav-item px-4 px-lg-3">
-            <a class="nav-link" href="#" @click="toggleModal(showRegister)">Register</a>
+            <button class="nav-link bg-transparent border-0" @click="$emit('toggle-register')">Register</button>
           </li>
         </ul>
       </div>
@@ -44,7 +44,7 @@
 
 <script>
 export default {
-  props: ['showLogin', 'showRegister'],
+  emits: ['toggle-login', 'toggle-register'],
   data() {
     return {
       showNav: false,
@@ -74,7 +74,7 @@ export default {
 
 .custom-navbar .navbar-nav li a.active,
 .custom-navbar .navbar-nav li a:hover,
-.custom-navbar .navbar-nav li a:active {
+.custom-navbar .navbar-nav li a:active, button.nav-link:hover {
   color: #5a4fdc !important;
 }
 </style>

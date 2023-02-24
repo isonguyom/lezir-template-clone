@@ -16,8 +16,8 @@
       </div>
       <div class="col-12 d-flex justify-content-between">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
-          <label class="form-check-label" for="gridCheck">
+          <input class="form-check-input" type="checkbox" id="loginRemember">
+          <label class="form-check-label" for="loginRemember">
             Remember Me
           </label>
         </div>
