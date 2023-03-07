@@ -8,19 +8,18 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
-      props: {loginIsActive: false, registerIsActive: false}
     },
   ],
 
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to) {
     if (to.hash) {
       return {
         el: to.hash,
-        top: 90,
-        behavior: 'smooth',
-      }
+        top: 60,
+        behavior: "smooth",
+      };
     }
-  }
+  },
 });
 
 export default router;
