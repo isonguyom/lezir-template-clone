@@ -4,11 +4,7 @@
       <div class="d-lg-flex justify-content-between py-3">
         <div class="col-lg-4">
           <div class="card bg-transparent border-0">
-            <img
-              src="../assets/images/logo-light.png"
-              class="card-img-top logo"
-              alt="..."
-            />
+            <img src="/images/logo-light.png" class="card-img-top logo" alt="..." />
             <div class="card-body px-0 my-2">
               <p class="card-text text-white-50">
                 Cras ultricies mi eu turpis sit hendrerit fringilla vestibulum
@@ -16,32 +12,19 @@
               </p>
             </div>
             <div class="card-body px-0">
-              <a
-                :href="item.link"
-                class="card-link text-white-50"
-                v-for="(item, key) in socialItems"
-                :key="item.name"
-                v-html="item.icon"
-              ></a>
+              <a :href="item.link" class="card-link text-white-50" v-for="(item, key) in socialItems" :key="item.name"
+                v-html="item.icon"></a>
             </div>
           </div>
         </div>
         <div class="col-lg-7 d-md-flex justify-content-between">
-          <div
-            class="bg-transparent border-0"
-            v-for="(link, key) in links"
-            :key="key"
-          >
+          <div class="bg-transparent border-0" v-for="(link, key) in links" :key="key">
             <div class="card-body p-0 mb-3">
               <h5 class="card-title uppercase text-white">{{ link.title }}</h5>
             </div>
             <div class="list-group bg-transparent">
-              <a
-                href="#"
-                class="list-group-item list-group-item-action bg-transparent border-0 text-white-50 px-0 me-4"
-                v-for="(item, index) in link.linkText"
-                :key="index"
-              >
+              <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 text-white-50 px-0 me-4"
+                v-for="(item, index) in link.linkText" :key="index">
                 {{ item }}
               </a>
             </div>
@@ -107,6 +90,8 @@ export default {
 
 <style scoped>
 .Footer {
+  background: url('/images/footer-bg.png');
+  background-size: cover;
   background-color: #292838;
 }
 

@@ -1,9 +1,7 @@
 <template>
   <section class="Features container-fluid">
     <div class="container">
-      <div
-        class="card text-center mb-5 border-0 bg-transparent mx-auto col-lg-6"
-      >
+      <div class="card text-center mb-5 border-0 bg-transparent mx-auto col-lg-6">
         <div class="card-body">
           <h3 class="card-title">Awesome Features</h3>
           <p class="card-text opacity-75">
@@ -13,59 +11,31 @@
         </div>
       </div>
       <div class="card-group mb-5 border-0 feature-wrapper">
-        <div
-          class="d-lg-flex justify-content-between align-items-center flex-wrap feature mb-5"
-          v-for="(feature, key) in features"
-          :key="key"
-          :class="feature.mainClass"
-          :style="{ backgroundImage: feature.bg }"
-        >
+        <div class="d-lg-flex justify-content-between align-items-center flex-wrap feature mb-5"
+          v-for="(feature, key) in features" :key="key" :class="feature.mainClass"
+          :style="{ backgroundImage: 'url(' + `images/${feature.bg}` + ')' }">
           <div class="feature-img col-lg-6">
-            <img
-              :src="`/src/assets/images/${feature.image}`"
-              class="img-fluid rounded-start"
-              alt="..."
-            />
+            <img :src="`images/${feature.image}`" class="img-fluid rounded-start" alt="..." />
           </div>
           <div class="col-lg-5 py-5">
             <p class="card-title mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                fill="#5A4FDC"
-                class="bi bi-clouds-fill me-2"
-                viewBox="0 0 16 16"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#5A4FDC" class="bi bi-clouds-fill me-2"
+                viewBox="0 0 16 16">
+                <path d="M11.473 9a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 14h8.5a2.5 2.5 0 1 0-.027-5z" />
                 <path
-                  d="M11.473 9a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 14h8.5a2.5 2.5 0 1 0-.027-5z"
-                />
-                <path
-                  d="M14.544 9.772a3.506 3.506 0 0 0-2.225-1.676 5.502 5.502 0 0 0-6.337-4.002 4.002 4.002 0 0 1 7.392.91 2.5 2.5 0 0 1 1.17 4.769z"
-                />
+                  d="M14.544 9.772a3.506 3.506 0 0 0-2.225-1.676 5.502 5.502 0 0 0-6.337-4.002 4.002 4.002 0 0 1 7.392.91 2.5 2.5 0 0 1 1.17 4.769z" />
               </svg>
               CREATIVE FEATURES
             </p>
             <h4 class="card-title mb-4">{{ feature.title }}</h4>
             <p class="card-text opacity-75">{{ feature.details }}</p>
-            <p
-              class="card-text opacity-75"
-              v-for="(item, index) in feature.meta"
-              :key="index"
-            >
+            <p class="card-text opacity-75" v-for="(item, index) in feature.meta" :key="index">
               <span class="pe-1 opacity-75" v-html="item.icon"></span>
               {{ item.text }}
             </p>
-            <a
-              :href="feature.readMoreLink"
-              class="btn text-white me-2 px-4 fw-bold rounded-1 mt-5 shadow-sm custom-btn"
-              >Read More</a
-            >
-            <a
-              :href="feature.buyMoreLink"
-              class="btn px-4 fw-bold rounded-1 mt-5 shadow-sm buy-btn"
-              >Buy More</a
-            >
+            <a :href="feature.readMoreLink"
+              class="btn text-white me-2 px-4 fw-bold rounded-1 mt-5 shadow-sm custom-btn">Read More</a>
+            <a :href="feature.buyMoreLink" class="btn px-4 fw-bold rounded-1 mt-5 shadow-sm buy-btn">Buy More</a>
           </div>
         </div>
       </div>
@@ -92,7 +62,7 @@ export default {
               icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-life-preserver" viewBox="0 0 16 16"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm6.43-5.228a7.025 7.025 0 0 1-3.658 3.658l-1.115-2.788a4.015 4.015 0 0 0 1.985-1.985l2.788 1.115zM5.228 14.43a7.025 7.025 0 0 1-3.658-3.658l2.788-1.115a4.015 4.015 0 0 0 1.985 1.985L5.228 14.43zm9.202-9.202-2.788 1.115a4.015 4.015 0 0 0-1.985-1.985l1.115-2.788a7.025 7.025 0 0 1 3.658 3.658zm-8.087-.87a4.015 4.015 0 0 0-1.985 1.985L1.57 5.228A7.025 7.025 0 0 1 5.228 1.57l1.115 2.788zM8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/> </svg>',
             },
           ],
-          bg: "url('/src/assets/images/features-bg-img.png')",
+          bg: "features-bg-img",
           image: "features-img.png",
           readMoreLink: "#",
           buyMoreLink: "#",
@@ -111,20 +81,13 @@ export default {
               icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rss" viewBox="0 0 16 16"> <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/> <path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z"/> </svg>',
             },
           ],
-          bg: "url('/src/assets/images/features-bg-img-1.png')",
+          bg: "features-bg-img-1",
           image: "features-img-1.png",
           readMoreLink: "#",
           buyMoreLink: "#",
         },
       ],
     };
-  },
-
-  computed: {
-    getImageUrl(name) {
-      const image = `/src/assets/images/${name}`;
-      console.log(typeof image);
-    },
   },
 };
 </script>

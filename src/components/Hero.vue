@@ -13,18 +13,9 @@
         </p>
         <form class="row g-3">
           <div class="input-group mb-3">
-            <input
-              type="email"
-              class="form-control py-2 px-4 border-0 custom-input"
-              placeholder="Enter email..."
-              aria-label="Recipient's username"
-              aria-describedby="button-addon2"
-            />
-            <button
-              class="btn text-white px-4 rounded-1 shadow-sm fw-bold custom-btn"
-              type="button"
-              id="button-addon2"
-            >
+            <input type="email" class="form-control py-2 px-4 border-0 custom-input" placeholder="Enter email..."
+              aria-label="Recipient's username" aria-describedby="button-addon2" />
+            <button class="btn text-white px-4 rounded-1 shadow-sm fw-bold custom-btn" type="button" id="button-addon2">
               Subscribe
             </button>
           </div>
@@ -32,7 +23,7 @@
       </div>
 
       <div class="col-lg-6 me-0 mt-5 mt-lg-0">
-        <img src="@/assets/images/hero-1-img.png" alt="hero image" />
+        <img src="/images/hero-1-img.png" alt="hero image" />
       </div>
     </div>
   </section>
@@ -40,7 +31,7 @@
 
 <style scoped>
 .Hero {
-  background: url("/src/assets/images/hero-1-bg-img.png");
+  background: url("/images/hero-1-bg-img.png");
   background-size: cover;
   padding-top: 125px;
 }

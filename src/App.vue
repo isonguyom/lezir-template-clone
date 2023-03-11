@@ -19,15 +19,9 @@ function toggleRegister() {
 </script>
 
 <template>
-  <Navbar
-    @toggle-login="toggleLogin"
-    @toggle-register="toggleRegister"
-  ></Navbar>
+  <Navbar @toggle-login="toggleLogin" @toggle-register="toggleRegister"></Navbar>
   <Login :isActive="state.loginIsActive" @close-modal="toggleLogin"></Login>
-  <Register
-    :isActive="state.registerIsActive"
-    @close-modal="toggleRegister"
-  ></Register>
+  <Register :isActive="state.registerIsActive" @close-modal="toggleRegister"></Register>
   <RouterView></RouterView>
 </template>
 

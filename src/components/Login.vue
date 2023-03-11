@@ -1,12 +1,7 @@
 <template>
-  <section
-    class="custom-modal w-100 vh-100 position-fixed top-0 py-4"
-    :class="{ modal_active: isActive }"
-    @click.self.prevent="$emit('close-modal')"
-  >
-    <section
-      class="container-fluid col-sm-8 col-md-6 col-lg-4 bg-white rounded"
-    >
+  <section class="custom-modal w-100 vh-100 position-fixed top-0 py-4" :class="{ modal_active: isActive }"
+    @click.self.prevent="$emit('close-modal')">
+    <section class="container-fluid col-sm-8 col-md-6 col-lg-4 bg-white rounded">
       <div class="container py-3">
         <div class="card-header text-center">
           <h1 class="mb-4 h2 fw-bold">Welcome To Lezir</h1>
@@ -15,56 +10,29 @@
         <form class="row g-4">
           <div class="col-12">
             <label for="loginEmail" class="form-label">Username / Email</label>
-            <input
-              type="text"
-              class="form-control"
-              id="loginEmail"
-              placeholder="Youremail@gmail.com"
-            />
+            <input type="text" class="form-control" id="loginEmail" placeholder="Youremail@gmail.com" />
           </div>
           <div class="col-12">
             <label for="loginPassword" class="form-label">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="loginPassword"
-              placeholder="Password"
-            />
+            <input type="password" class="form-control" id="loginPassword" placeholder="Password" />
           </div>
           <div class="col-12 d-flex justify-content-between">
             <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="loginRemember"
-              />
+              <input class="form-check-input" type="checkbox" id="loginRemember" />
               <label class="form-check-label" for="loginRemember">
                 Remember Me
               </label>
             </div>
             <div>
-              <a href="" class="opacity-75 text-decoration-none text-secondary"
-                >Forgot Password.?</a
-              >
+              <a href="" class="opacity-75 text-decoration-none text-secondary">Forgot Password.?</a>
             </div>
           </div>
-          <button
-            type="submit"
-            class="btn text-white px-4 rounded-1 shadow-sm fw-bold custom-btn mx-auto w-auto mt-3"
-          >
+          <button type="submit" class="btn text-white px-4 rounded-1 shadow-sm fw-bold custom-btn mx-auto w-auto mt-3">
             Login
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-arrow-right-circle ms-2"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-arrow-right-circle ms-2" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
             </svg>
           </button>
         </form>
@@ -76,17 +44,9 @@
             </p>
           </div>
           <div class="d-flex justify-content-center mb-3 mt-n5">
-            <div
-              class="social-bg mx-3 p-2 rounded-circle"
-              v-for="(item, key) in socialItems"
-              :key="key"
-              :class="item.name"
-            >
-              <a
-                href=""
-                class="text-decoration-none text-white"
-                v-html="item.icon"
-              ></a>
+            <div class="social-bg mx-3 p-2 rounded-circle" v-for="(item, key) in socialItems" :key="key"
+              :class="item.name">
+              <a href="" class="text-decoration-none text-white" v-html="item.icon"></a>
             </div>
           </div>
           <p>

@@ -4,18 +4,10 @@
       <div class="d-lg-flex justify-content-between align-items-center">
         <div class="card col-lg-4 border-0 mb-5 mb-lg-0">
           <div class="svg-bg-title p-3 rounded mb-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="#5A4FDC"
-              class="bi bi-box-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001 6.971 2.789Zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#5A4FDC" class="bi bi-box-fill"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001 6.971 2.789Zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z" />
             </svg>
           </div>
           <div class="card-body px-0">
@@ -24,23 +16,13 @@
               Nam libero tempore cum soluta as nobis est eligendi optio cumque
               nihile impedite quo minus id quod maxime.
             </p>
-            <a
-              href="#"
-              class="btn px-4 mt-2 fw-bold rounded-1 shadow-sm custom-btn-outline"
-              >Learn More</a
-            >
+            <a href="#" class="btn px-4 mt-2 fw-bold rounded-1 shadow-sm custom-btn-outline">Learn More</a>
           </div>
         </div>
         <div class="col-lg-7 d-md-flex flex-wrap justify-content-around">
-          <div
-            class="card reason-card text-center border-0 px-3 py-4 shadow-sm"
-            v-for="(reason, key) in reasons"
-            :key="key"
-          >
-            <div
-              class="svg-bg-text p-3 rounded-circle mb-2 mx-auto"
-              v-html="reason.icon"
-            ></div>
+          <div class="card reason-card text-center border-0 px-3 py-4 shadow-sm" v-for="(reason, key) in reasons"
+            :key="key">
+            <div class="svg-bg-text p-3 rounded-circle mb-2 mx-auto" v-html="reason.icon"></div>
             <div class="card-body px-0">
               <h5 class="card-title">{{ reason.title }}</h5>
               <p class="card-text opacity-75">{{ reason.details }}</p>

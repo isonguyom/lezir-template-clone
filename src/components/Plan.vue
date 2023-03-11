@@ -10,29 +10,17 @@
       </div>
     </div>
     <div class="d-lg-flex justify-content-between">
-      <div
-        class="mb-5 col-lg-3 text-center plan shadow py-4"
-        v-for="(plan, key) in plans"
-        :key="key"
-      >
+      <div class="mb-5 col-lg-3 text-center plan shadow py-4" v-for="(plan, key) in plans" :key="key">
         <div class="row g-0" :class="{ active_plan: plan.isActive }">
           <div class="plan-icon w-auto mx-auto p-4" v-html="plan.icon"></div>
           <div class="card-body">
             <h4 class="card-title my-3">{{ plan.name }}</h4>
             <h1><sup class="me-2 h4 fw-bold">$</sup>{{ plan.price }}</h1>
             <p class="card-text opacity-75">User / Month</p>
-            <p
-              class="card-text opacity-75"
-              v-for="(feature, index) in plan.features"
-              :key="index"
-            >
+            <p class="card-text opacity-75" v-for="(feature, index) in plan.features" :key="index">
               {{ feature }}
             </p>
-            <a
-              :href="plan.buyLink"
-              class="btn mt-4 px-4 rounded-1 shadow-sm fw-bold custom-btn-outline"
-              >Buy Now</a
-            >
+            <a :href="plan.buyLink" class="btn mt-4 px-4 rounded-1 shadow-sm fw-bold custom-btn-outline">Buy Now</a>
           </div>
         </div>
       </div>
@@ -78,6 +66,12 @@ export default {
 <style scoped>
 section {
   padding: 150px 0;
+}
+
+.plan {
+  background: url('/images/pricing-bottom-bg.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .plan-icon {

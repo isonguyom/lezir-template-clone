@@ -13,9 +13,11 @@ const state = reactive({
   loginIsActive: props.loginIsActive,
   registerIsActive: props.registerIsActive,
 });
+
 function toggleLoginModal() {
   state.loginIsActive = !state.loginIsActive;
 }
+
 function toggleRegisterModal() {
   state.registerIsActive = !state.registerIsActive;
 }
@@ -31,18 +33,12 @@ function toggleRegisterModal() {
     <News id="blog"></News>
     <Contact id="contact"></Contact>
     <Footer></Footer>
-    <section
-      class="custom-modal w-100 vh-100 position-fixed top-0 py-4"
-      :class="{ modal_active: state.loginIsActive }"
-      @click.self.prevent="toggleLoginModal"
-    >
+    <section class="custom-modal w-100 vh-100 position-fixed top-0 py-4" :class="{ modal_active: state.loginIsActive }"
+      @click.self.prevent="toggleLoginModal">
       <Login></Login>
     </section>
-    <section
-      class="custom-modal w-100 vh-100 position-fixed top-0 py-4"
-      :class="{ modal_active: props.registerIsActive }"
-      @click="toggleRegisterModal"
-    >
+    <section class="custom-modal w-100 vh-100 position-fixed top-0 py-4" :class="{ modal_active: props.registerIsActive }"
+      @click="toggleRegisterModal">
       <Register></Register>
     </section>
   </section>
